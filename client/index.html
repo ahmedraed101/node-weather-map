@@ -8,41 +8,25 @@
         <!-- The lines below are only needed for old environments like Internet Explorer and Android 4.x -->
         <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,TextDecoder"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.18.3/minified.js"></script>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="./css/all.min.css" />
         <link rel="stylesheet" href="node_modules/ol/ol.css" />
-        <style>
-            body {
-                height: 100vh;
-                background-color: black;
-                margin: 0;
-                padding: 0;
-            }
-            .map {
-                width: 100%;
-                height: 100%;
-            }
-            a.skiplink {
-                position: absolute;
-                clip: rect(1px, 1px, 1px, 1px);
-                padding: 0;
-                border: 0;
-                height: 1px;
-                width: 1px;
-                overflow: hidden;
-            }
-            a.skiplink:focus {
-                clip: auto;
-                height: auto;
-                width: auto;
-                background-color: #fff;
-                padding: 0.3em;
-            }
-            #map:focus {
-                outline: #4a74a8 solid 0.15em;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/1f2bd28e91.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
+        <header>
+            <h1>Weather Map</h1>
+            <a href="https://github.com/ahmedraed101" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ahmedraed101/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </header>
+        <div class="current-info"></div>
         <a class="skiplink" href="#map">Go to map</a>
         <div id="map" class="map" tabindex="0"></div>
 
