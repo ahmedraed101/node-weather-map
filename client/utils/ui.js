@@ -29,6 +29,7 @@ const CreatePopup = () => {
         if (error) {
             console.log(error)
             popup.innerHTML = `<p style="color:red">${error}</p>`
+            setTimeout(() => popup.remove(), 3000)
             return
         }
         popup.innerText = ''
