@@ -18,15 +18,12 @@ app.get('/api/weather', (req, res) => {
         })
     }
     console.log(req.query.lon, req.query.lat)
-    forecast(req.query.lon, req.query.lat, console.log)
-    res.send({
-        location: 'current location',
-        current: {
-            degree: 32,
-            feels_like: 33,
-        },
-        image: 'link/to/image',
-        images_link: 'link/to/images',
+    forecast(req.query.lon, req.query.lat, (error, data) => {
+        if (error) {
+            console.log(data)
+            return res.send({ error })
+        }
+        res.send(data)
     })
 })
 

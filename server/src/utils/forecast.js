@@ -13,17 +13,25 @@ const forecast = (longitude, latitude, callback) => {
         } else if (res.body.error) {
             callback('unable for find location of WeatherStack', undefined)
         } else {
-            console.log(res.body)
-            // const { location, current } = res.body
-            // const { region, name, country } = location
-            // const { weather_descriptions, temperature, feelslike } = current
+            const { location, current } = res.body
+            const { region, name, country, localtime } = location
+            const {
+                weather_descriptions,
+                temperature,
+                feelslike,
+                weather_icons,
+            } = current
 
-            // callback(
-            //     undefined,
-            //     `the Weather in ${region} - ${name} - ${country} is ${weather_descriptions.join(
-            //         ' '
-            //     )} Temperature: ${temperature} / Feels like: ${feelslike}`
-            // )
+            const data = {
+                location: { region, name, country, localtime },
+                current: {
+                    weather_descriptions,
+                    temperature,
+                    feelslike,
+                },
+                images: weather_icons,
+            }
+            callback(undefined, data)
         }
     })
 }
