@@ -1,6 +1,6 @@
 const getWeatherData = async (lon, lat, callback) => {
     const response = await fetch(
-        `https://node-weahter-map.onrender.com/api/weather?lat=${lat}&lon=${lon}`
+        `http://localhost:5000/api/weather?lat=${lat}&lon=${lon}`
     )
     const data = await response.json()
     if (data.error) {

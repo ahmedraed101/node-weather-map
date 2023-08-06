@@ -5,7 +5,7 @@ const CreateInfoEl = (info) => {
     div.classList.add('popup-info')
     div.innerHTML = `
     <div>
-    <img src="${info.images[0]}" alt="${info.current.weather_descriptions[0]}" />
+    <img src="${info.image}" alt="${info.current.weather_description}" />
     <p className="location">${info.location.name}</p>
     </div>
     <div>
@@ -35,12 +35,8 @@ const CreatePopup = () => {
             return
         }
         currentInfoEl.innerHTML = `
-        Weather in ${info.location.country} - ${info.location.region} - ${
-            info.location.name
-        } is ${info.current.weather_descriptions.join(' ')}
-        , Temperature is ${info.current.temperature} &deg; and Feels Like ${
-            info.current.feelslike
-        } &deg;
+        Weather in ${info.location.country} - ${info.location.region} - ${info.location.name} is ${info.current.weather_description}
+        , Temperature is ${info.current.temperature} &deg; and Feels Like ${info.current.feelslike} &deg;
         , Local Time: ${info.location.localtime}
         `
         popup.innerText = ''

@@ -20,7 +20,7 @@ app.get('/api/weather', (req, res) => {
     console.log(req.query.lon, req.query.lat)
     forecast(req.query.lon, req.query.lat, (error, data) => {
         if (error) {
-            console.log(data)
+            console.log(error)
             return res.send({ error })
         }
         res.send(data)
