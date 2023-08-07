@@ -7,7 +7,7 @@ Weather Map is a web application that enables you to view real-time Weather data
 ### APIs
 
 -   [Open layers](https://openlayers.org/)
--   the backend weather data is Powered by [WeatherAPI.com](https://www.weatherapi.com/)![My Remote Image](//cdn.weatherapi.com/v4/images/weatherapi_logo.png)
+-   the backend weather data is Powered by [WeatherAPI.com](https://www.weatherapi.com/)
 
 ### Hosting
 
