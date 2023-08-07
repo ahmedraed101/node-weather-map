@@ -9,8 +9,8 @@ const CreateInfoEl = (info) => {
     <p className="location">${info.location.name}</p>
     </div>
     <div>
-    <p className="degree-real">${info.current.temperature} &deg;</p>
-    <p className="feels-like">Feels: ${info.current.feelslike} &deg;</p>
+    <p className="degree-real">${info.current.temperature}&nbsp;&deg;</p>
+    <p className="feels-like">feels/&nbsp;${info.current.feelslike}&nbsp;&deg;</p>
     </div>
     `
     return div
