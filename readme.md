@@ -12,4 +12,4 @@ Weather Map is a web application that enables you to view real-time Weather data
 ### Hosting
 
 -   backend API [render](https://render.com)
--   frontend APP [render](https://www.netlify.com/)
+-   frontend APP [netlify](https://www.netlify.com/)
