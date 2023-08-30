@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 if (process.env.ALLOWED_CORS) {
+    console.log('yes')
     app.use(
         cors({
             origin: process.env.ALLOWED_CORS,
