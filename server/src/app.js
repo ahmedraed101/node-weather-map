@@ -6,7 +6,16 @@ require('dotenv').config()
 const PORT = process.env.PORT || 5000
 const app = express()
 
-app.use(cors())
+if (process.env.ALLOWED_CORS) {
+    app.use(
+        cors({
+            origin: process.env.ALLOWED_CORS,
+            optionsSuccessStatus: 200,
+        })
+    )
+} else {
+    app.use(cors())
+}
 
 app.get('/api/weather', (req, res) => {
     res.set({
